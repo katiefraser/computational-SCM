@@ -3,6 +3,8 @@ A computational approach to the Stereotype Content Model.
 
 (TO DO: more info here about SCM and POLAR). 
 
+The model makes use of sentence-transformers https://www.sbert.net/ and is based on the POLAR framework proposed by Mathew et al. https://arxiv.org/pdf/2001.09876.pdf . We have only tested the code using python3.9.5 and on a CPU. 
+
 
 # Training
 To train your SCM model, run train.py

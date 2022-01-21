@@ -79,6 +79,11 @@ Model: axis_rotated + PCA : 72.0 (11.4)
 Model: axis_rotated + PLS : 78.7 (11.2)
 ```
                                                                       
+# Other data
+
+(TO DO -- talk about data included in repo)
+                                                                      
+
 # Citation
 
 If you use this code, please cite our paper:

@@ -1,5 +1,7 @@
 # computational-SCM
-A computational approach to the Stereotype Content Model
+A computational approach to the Stereotype Content Model. 
+
+(TO DO: more info here about SCM and POLAR). 
 
 
 # Training
@@ -9,7 +11,7 @@ To train your SCM model, run train.py
 python3 train.py
 ```
 
-By default, this uses the optimal model from the paper (i.e., with PLS dimensionality reduction, axis-rotation, and using the roberta-large-NLI model). All of these options can be modified within the program.
+By default, this uses the optimal model from the paper (i.e., with PLS dimensionality reduction, axis-rotation, and using the 'roberta-large-nli-mean-tokens' model). All of these options can be modified within the program.
 
 The output of running the program will be a saved a model, e.g. pls_model_roberta-large-nli-mean-tokens.sav.
 
@@ -31,7 +33,60 @@ Computing warmth and competence ...
 Outputting file ... 
 ACCURACY:  0.9914893617021276
 ```
+                                                                                                                                          
+# Reproducibility
+
+ To reproduce the cross-validation results from the paper, run:
                                                                       
+```
+python3 reproduce.py
+```
+
+Again, by default this will generate results for the 'roberta-large-nli-mean-tokens' sentence embedding model, although this can be modified in the code to be any of the other models considered in the paper, or indeed any sentence embedding model of your choosing. The code runs 5-fold cross validation for the six model configurations (original POLAR and axis-rotated POLAR, each with PCA, PLS, or no dimensionality reduction). It uses the data files found in data/cross_validation. If you run this program, you should reproduce the results from Table 2 in the paper. 
                                                                       
+```
+== Cross-validation for embedding model: roberta-large-nli-mean-tokens ==
+
+-- basic_functionality --
+Model: original + none : 95.0 (3.8)
+Model: original + PCA : 95.4 (3.3)
+Model: original + PLS : 96.2 (2.8)
+Model: axis_rotated + none : 97.9 (2.3)
+Model: axis_rotated + PCA : 97.9 (2.3)
+Model: axis_rotated + PLS : 97.9 (2.3)
+-- negation --
+Model: original + none : 95.3 (1.6)
+Model: original + PCA : 95.3 (2.8)
+Model: original + PLS : 95.3 (1.6)
+Model: axis_rotated + none : 95.8 (3.1)
+Model: axis_rotated + PCA : 96.2 (2.4)
+Model: axis_rotated + PLS : 95.8 (2.6)
+-- semantic_composition --
+Model: original + none : 73.9 (9.8)
+Model: original + PCA : 77.9 (8.2)
+Model: original + PLS : 77.7 (10.3)
+Model: axis_rotated + none : 81.6 (8.2)
+Model: axis_rotated + PCA : 78.8 (7.9)
+Model: axis_rotated + PLS : 84.4 (7.7)
+-- syntax --
+Model: original + none : 70.2 (16.7)
+Model: original + PCA : 70.1 (14.0)
+Model: original + PLS : 71.0 (12.3)
+Model: axis_rotated + none : 72.1 (9.3)
+Model: axis_rotated + PCA : 72.0 (11.4)
+Model: axis_rotated + PLS : 78.7 (11.2)
+```
                                                                       
-                                                                   
+# Citation
+
+If you use this code, please cite our paper:
+
+```
+@journal{}
+```
+
+# Contact
+
+If you have any questions or comments, please contact Katie at kathleen.fraser@nrc-cnrc.gc.ca                                                                      
+
+                                                                      

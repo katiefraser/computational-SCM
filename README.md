@@ -1,9 +1,9 @@
 # computational-SCM
-A computational approach to the Stereotype Content Model. 
+A computational approach to the Stereotype Content Model, as described in our paper Computational Modelling of Stereotype Content in Text.
+ 
+The [Stereotype Content Model (SCM)](https://www.sciencedirect.com/science/article/pii/S1364661306003299) provides a theoretical basis for understanding human social cognition. It proposes that the two primary, universal dimensions underlying human stereotypes are warmth (friendliness, trustworthiness) and competence (ability, intelligence, skill). As a step towards automatically identifying and understanding stereotypes in text, we provide a computational model to estimate warmth and competence from free-text sentences.
 
-(TO DO: more info here about SCM and POLAR). 
-
-The model makes use of sentence-transformers https://www.sbert.net/ and is based on the POLAR framework proposed by Mathew et al. https://arxiv.org/pdf/2001.09876.pdf . We have only tested the code using python3.9.5 and on a CPU. 
+The model makes use of [sentence-transformers](https://www.sbert.net/) and is based on the POLAR framework proposed by [Mathew et al.](https://arxiv.org/pdf/2001.09876.pdf). We have only tested the code using python3.9.5 and on a CPU. 
 
 
 # Training
@@ -83,9 +83,9 @@ Model: axis_rotated + PLS : 78.7 (11.2)
 
 Included in the repository are:
 
-- training sentences containing one and two adjectives (generated from the Seed Lexicon provided by Nicolas et al., 2021: https://onlinelibrary.wiley.com/doi/full/10.1002/ejsp.2724). 
+- training sentences containing one and two adjectives (generated from the Seed Lexicon provided by [Nicolas et al., 2021](https://onlinelibrary.wiley.com/doi/full/10.1002/ejsp.2724)). 
 - test sentences with labels. Note that these test sentences overlap with the training sentences and are only intended to be used to confirm that the software is working properly.
-- the cross-validation data, as discussed in Section 3.1.3 of the paper. In this case, there is no overlap between train and test data in each fold. 
+- the cross-validation data, as discussed in Section 3.1.3 of the paper. In this case, there is no overlap between train and test data in each fold. There are four test files, intended to test basic functionality, negation, semantic composition, and syntactic variability.
 - the manual annotations for warmth and competence for each word in the Seed Lexicon, averaged over three annotators. 
 
 In the paper, we also use StereoSet as a validation set; that data is available here: https://stereoset.mit.edu/

@@ -79,10 +79,19 @@ Model: axis_rotated + PCA : 72.0 (11.4)
 Model: axis_rotated + PLS : 78.7 (11.2)
 ```
                                                                       
-# Other data
+# Data
 
-(TO DO -- talk about data included in repo)
-                                                                      
+Included in the repository are:
+
+- training sentences containing one and two adjectives (generated from the Seed Lexicon provided by Nicolas et al., 2021: https://onlinelibrary.wiley.com/doi/full/10.1002/ejsp.2724). 
+- test sentences with labels. Note that these test sentences overlap with the training sentences and are only intended to be used to confirm that the software is working properly.
+- the cross-validation data, as discussed in Section 3.1.3 of the paper. In this case, there is no overlap between train and test data in each fold. 
+- the manual annotations for warmth and competence for each word in the Seed Lexicon, averaged over three annotators. 
+
+In the paper, we also use StereoSet as a validation set; that data is available here: https://stereoset.mit.edu/
+
+Finally, we also describe a Twitter data collection effort related to women and older adults. That data cannot be publicly re-distributed under the Twitter Terms of Service, but interested researchers may contact us for more information. 
+                                                                  
 
 # Citation
 

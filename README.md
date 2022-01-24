@@ -103,6 +103,6 @@ If you use this code, please cite our paper:
 
 # Contact
 
-If you have any questions or comments, please contact Katie at kathleen.fraser@nrc-cnrc.gc.ca                                                                      
+If you have any questions or comments, please open an issue or contact Katie at kathleen.fraser@nrc-cnrc.gc.ca                                                                      
 
                                                                       
